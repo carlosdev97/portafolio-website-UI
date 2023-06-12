@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #2490ce;
+    --primary-fontcolor: #1a2233;
+    --secondary-fontcolor: #ffffff;
+
+    --primary-bgcolor: #1a2233;
+    --secondary-bgcolor: #ffffff;
+
+    --poppins: 'Poppins', sans-serif;
+
+    --padding: 15px 5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
