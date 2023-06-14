@@ -9,6 +9,7 @@
     --poppins: 'Poppins', sans-serif;
 
     --padding: 15px 5%;
+    --padding-mobile: 15px 2%;
 }
 
 body {

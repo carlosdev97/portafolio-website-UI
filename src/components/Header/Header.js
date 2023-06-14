@@ -1,4 +1,3 @@
-import "./Header.css";
 import React, { useState, useContext } from "react";
 import { BiSun, BiMoon, BiGridAlt, BiHome, BiBriefcase, BiUser, BiCodeBlock, BiEnvelope, BiX } from "react-icons/bi";
 import styled, { css } from "styled-components";
@@ -38,6 +37,7 @@ const StyledNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
   @media (max-width: 768px) {
     width: auto;
   }
