@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { AiFillGithub, AiFillLinkedin, AiFillFilePdf } from 'react-icons/ai';
 import { ThemeContext } from '../../ContextTheme';
 
@@ -93,6 +93,18 @@ const StyledHeroLink = styled.a`
   }
 `
 
+const StyledAiFillGithub = styled(AiFillGithub)`
+  color: var(--primary-color);
+`
+
+const StyledAiFillLinkedin = styled(AiFillLinkedin)`
+  color: var(--primary-color);
+`
+
+const StyledAiFillFilePdf = styled(AiFillFilePdf)`
+  color: var(--primary-color);
+`
+
 const StyledHeroImage = styled.img`
   width: 350px;
   height: 350px;
@@ -129,7 +141,7 @@ const Hero = () => {
             rel='noopener noreferrer'
             darkmode={darkMode}>
               GitHub
-              <AiFillGithub />
+              <StyledAiFillGithub />
           </StyledHeroLink>
           <StyledHeroLink 
             href='https://www.linkedin.com/in/carlos-antonio-meza-lopez/' 
@@ -137,7 +149,7 @@ const Hero = () => {
             rel='noopener noreferrer'
             darkmode={darkMode}>
               LinkedIn
-              <AiFillLinkedin />
+              <StyledAiFillLinkedin />
           </StyledHeroLink>
           <StyledHeroLink 
             href='#' 
@@ -145,7 +157,7 @@ const Hero = () => {
             rel='noopener noreferrer'
             darkmode={darkMode}>
               Curriculum
-              <AiFillFilePdf />
+              <StyledAiFillFilePdf />
           </StyledHeroLink>
         </StyledHeroButtons>
       </StyledHeroInfo>
