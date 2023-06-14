@@ -11,12 +11,16 @@ const StyledHero = styled.section`
   align-items: center;
   background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
   @media (max-width: 768px) {
-    height: calc(100vh - 82px);
-    padding: var(--padding-mobile);
+    height: auto;
+    padding: var(--padding-tablet);
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 50px;
+  }
+  @media (max-width: 425px) {
+    padding: var(--padding-mobile);
+    gap: 100px;
   }
 `
 

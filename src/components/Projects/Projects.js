@@ -17,11 +17,9 @@ const StyledProjects = styled.section`
   background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
   @media (max-width: 768px) {
     height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: var(--padding-tablet);
   }
   @media (max-width: 425px) {
-    height: calc(100vh);
     padding: var(--padding-mobile);
   }
 `;
@@ -80,6 +78,9 @@ const StyledTitleCard = styled.h3`
 
 const StyledDescriptionCard = styled.p`
   margin: 15px 0 30px 0;
+  @media (max-width: 425px) {
+    margin: 0 0 30px 0;
+  }
 `;
 
 const StyledButtonsCard = styled.div`
