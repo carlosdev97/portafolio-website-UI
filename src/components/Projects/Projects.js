@@ -167,7 +167,7 @@ const Projects = () => {
             <StyledImageContainer>
               <StyledImageCard src="https://i.ibb.co/jR7QqcK/alurageek.jpg" alt='Mockups AluraGeek'/>
             </StyledImageContainer>
-            <StyledDataContainer>
+            <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>
                 AluraGeek
               </StyledTitleCard>
@@ -187,7 +187,7 @@ const Projects = () => {
             <StyledImageContainer>
               <StyledImageCard src="https://i.ibb.co/fH6Dd2w/image1.jpg" alt='Mockups AluraFlix'/>
             </StyledImageContainer>
-            <StyledDataContainer>
+            <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>
                 AluraFlix
               </StyledTitleCard>
