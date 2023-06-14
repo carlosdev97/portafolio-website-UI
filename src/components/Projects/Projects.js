@@ -10,8 +10,9 @@ import { FiExternalLink } from 'react-icons/fi';
 const StyledProjects = styled.section`
   height: 100vh;
   padding: var(--padding);
-  box-sizing: border-box;
   display: flex;
+  justify-content: center;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};

@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
       width: 100%;
       box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
       box-sizing: border-box;
-      z-index: 9999;
+      z-index: 9999
     }
 `
 const StyledLogo = styled.h1`

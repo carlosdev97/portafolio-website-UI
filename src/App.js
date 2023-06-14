@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects';
+import Training from './components/Training/Training';
 import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Header />
       <Hero />
       <Projects />
-      <AboutMe />
+      <Training />
     </div>
   );
 }
