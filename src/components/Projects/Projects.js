@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ThemeContext } from '../../ContextTheme';
+import { FiExternalLink } from 'react-icons/fi';
 
 const StyledProjects = styled.section`
   height: 100vh;
@@ -20,8 +21,8 @@ const StyledProjects = styled.section`
     padding-bottom: 100px;
   }
   @media (max-width: 425px) {
-    height: auto;
-    padding: 100px 2%;
+    height: calc(100vh);
+    padding: var(--padding-mobile);
   }
 `;
 
@@ -63,7 +64,6 @@ const StyledDataContainer = styled.div`
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
   @media (max-width: 425px) {
     width: 100%;
@@ -74,12 +74,12 @@ const StyledTitleCard = styled.h3`
   margin: 0;
   align-self: flex-start;
   @media (max-width: 425px) {
-    margin: 10px 0;
+    margin: 15px 0;
   }
 `;
 
 const StyledDescriptionCard = styled.p`
-  margin: 0;
+  margin: 15px 0 30px 0;
 `;
 
 const StyledButtonsCard = styled.div`
@@ -156,7 +156,7 @@ const Projects = () => {
               </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard href="https://carlosedm97.github.io/encriptador_de_texto_ONE/" target="_blank" rel="noopener noreferrer">
-                  Ver más
+                  Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>
             </StyledDataContainer>
@@ -176,7 +176,7 @@ const Projects = () => {
               </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard href="https://alurageek-one-carlosedm97.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  Ver más
+                  Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>
             </StyledDataContainer>
@@ -196,7 +196,7 @@ const Projects = () => {
               </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard href="https://aluraflix-one-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  Ver más
+                  Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>
             </StyledDataContainer>
