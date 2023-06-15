@@ -11,7 +11,7 @@ import {
   BiX,
 } from "react-icons/bi";
 import { HiOutlineAcademicCap } from "react-icons/hi";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { ThemeContext } from "../../ContextTheme";
 
 const StyledHeader = styled.header`
@@ -161,24 +161,47 @@ const StyledHeaderButtons = styled.div`
   }
 `;
 
+const rotateAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
 const StyledBiMoon = styled(BiMoon)`
   font-size: 20px;
-  transition: all 0.2s;
-  &:active{
-    transform: rotate(180deg);
-  }
+  ${props =>
+    props.rotate &&
+    css`
+      animation: ${rotateAnimation} 0.5s linear;
+    `}
 `
 const StyledBiSun = styled(BiSun)`
   font-size: 20px;
-  transition: all 0.2s;
-  &:active{
-    transform: rotate(180deg);
-  }
+  ${props =>
+    props.rotate &&
+    css`
+      animation: ${rotateAnimation} 0.5s linear;
+    `}
 `
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [menutoggle, setMenutoggle] = useState(false);
+
+  const [rotate, setRotate] = useState(false);
+
+  const handleIconClick = () => {
+    toggleDarkMode()
+    setRotate(true);
+
+    // Después de un tiempo, restablece el estado a falso para detener la animación
+    setTimeout(() => {
+      setRotate(false);
+    }, 1000);
+  }
 
   return (
     <StyledHeader darkmode={darkMode}>
@@ -284,9 +307,9 @@ const Header = () => {
         </StyledNav>
         <StyledHeaderButtons darkmode={darkMode}>
           {darkMode ? (
-            <StyledBiMoon onClick={() => toggleDarkMode()} />
+            <StyledBiMoon rotate={rotate} onClick={() => handleIconClick()} />
           ) : (
-            <StyledBiSun onClick={() => toggleDarkMode()} />
+            <StyledBiSun rotate={rotate} onClick={() => handleIconClick()} />
           )}
           <StyledIcon darkmode={darkMode}>
             <BiGridAlt onClick={() => setMenutoggle(!menutoggle)} />
