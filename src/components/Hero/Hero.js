@@ -11,15 +11,16 @@ const StyledHero = styled.section`
   background-color: ${(props) =>
     props.darkmode ? "var(--secondary-bgcolor)" : "var(--primary-bgcolor)"};
   @media (max-width: 768px) {
-    height: auto;
-    padding: var(--padding-tablet);
+    height: 100vh;
+    padding: 0 5%;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 50px;
   }
   @media (max-width: 425px) {
-    padding: var(--padding-mobile);
+    height: 100vh;
+    padding: 0 5%;
   }
 `;
 
