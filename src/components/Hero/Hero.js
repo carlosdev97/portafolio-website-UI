@@ -20,7 +20,6 @@ const StyledHero = styled.section`
   }
   @media (max-width: 425px) {
     padding: var(--padding-mobile);
-    gap: 100px;
   }
 `
 

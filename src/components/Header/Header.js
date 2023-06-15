@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { BiSun, BiMoon, BiGridAlt, BiHome, BiBriefcase, BiUser, BiCodeBlock, BiEnvelope, BiX } from "react-icons/bi";
+import { HiOutlineAcademicCap } from "react-icons/hi";
 import styled, { css } from "styled-components";
 import { ThemeContext } from '../../ContextTheme';
 
@@ -18,7 +19,7 @@ const StyledHeader = styled.header`
       width: 100%;
       box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
       box-sizing: border-box;
-      z-index: 9999
+      z-index: 9999;
     }
 `
 const StyledLogo = styled.h1`
@@ -44,7 +45,7 @@ const StyledNavigation = styled.div`
   }
 `
 const StyledNav = styled.nav`
-  width: 80%;
+  width: 90%;
   @media (max-width: 768px) {
     display: none;
     ${props =>
@@ -158,7 +159,7 @@ const Header = () => {
         <StyledNav active={menutoggle} darkmode={darkMode}>
           <StyledList>
             <StyledItem>
-              <StyledLinkItem darkmode={darkMode} href="#">
+              <StyledLinkItem darkmode={darkMode} href="#" onClick={() => setMenutoggle(!menutoggle)}>
                 <StyledIcon darkmode={darkMode}>
                   <BiHome />
                 </StyledIcon>
@@ -167,7 +168,7 @@ const Header = () => {
               </StyledLinkItem>
             </StyledItem>
             <StyledItem>
-              <StyledLinkItem darkmode={darkMode} href="#portafolio">
+              <StyledLinkItem darkmode={darkMode} href="#portafolio" onClick={() => setMenutoggle(!menutoggle)}>
                 <StyledIcon darkmode={darkMode}>
                   <BiBriefcase />
                 </StyledIcon>
@@ -176,7 +177,16 @@ const Header = () => {
               </StyledLinkItem>
             </StyledItem>
             <StyledItem>
-              <StyledLinkItem darkmode={darkMode} href="#sobremi">
+              <StyledLinkItem darkmode={darkMode} href="#formacion" onClick={() => setMenutoggle(!menutoggle)}>
+                <StyledIcon darkmode={darkMode}>
+                  <HiOutlineAcademicCap />
+                </StyledIcon>
+                <StyledBr />
+                Formación
+              </StyledLinkItem>
+            </StyledItem>
+            <StyledItem>
+              <StyledLinkItem darkmode={darkMode} href="#sobremi" onClick={() => setMenutoggle(!menutoggle)}>
                 <StyledIcon darkmode={darkMode}>
                   <BiUser />
                 </StyledIcon>
@@ -185,7 +195,7 @@ const Header = () => {
               </StyledLinkItem>
             </StyledItem>
             <StyledItem>
-              <StyledLinkItem darkmode={darkMode} href="#habilidades">
+              <StyledLinkItem darkmode={darkMode} href="#habilidades" onClick={() => setMenutoggle(!menutoggle)}>
                 <StyledIcon darkmode={darkMode}>
                   <BiCodeBlock />
                 </StyledIcon>
@@ -194,7 +204,7 @@ const Header = () => {
               </StyledLinkItem>
             </StyledItem>
             <StyledItem>
-              <StyledLinkItem darkmode={darkMode} href="#contacto">
+              <StyledLinkItem darkmode={darkMode} href="#contacto" onClick={() => setMenutoggle(!menutoggle)}>
                 <StyledIcon darkmode={darkMode}>
                   <BiEnvelope />
                 </StyledIcon>

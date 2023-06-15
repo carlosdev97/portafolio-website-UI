@@ -12,15 +12,22 @@ const StyledTraining = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: auto;
+    padding: var(--padding-tablet);
+  }
+  @media (max-width: 425px) {
+    padding: var(--padding-mobile);
+  }
 `
 
 const StyledTrainingContainer = styled.div`
   padding: 0 30%;
   @media (max-width: 768px) {
-    padding: var(--padding-tablet);
+    padding: 0 20%;
   }
   @media (max-width: 425px) {
-    padding: var(--padding-mobile);
+    padding: 0;
   }
 `
 // ! Inicio tarjeta
@@ -88,7 +95,7 @@ const Training = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <StyledTraining darkmode={darkMode}>
+    <StyledTraining darkmode={darkMode} id='formacion'>
       <Title title={"Formación"} darkmode={darkMode}/>
       <StyledTrainingContainer>
         <StyledTrainingCard>

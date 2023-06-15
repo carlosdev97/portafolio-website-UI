@@ -14,7 +14,7 @@ const StyledProjects = styled.section`
   justify-content: center;
   box-sizing: border-box;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
   @media (max-width: 768px) {
     height: auto;
@@ -141,7 +141,7 @@ const Projects = () => {
   };
 
   return (
-    <StyledProjects darkmode={darkMode}>
+    <StyledProjects darkmode={darkMode} id='portafolio'>
       <Title title={"Proyectos"} darkmode={darkMode}/>
       <StyledCarousel {...settings}>
         <div>
