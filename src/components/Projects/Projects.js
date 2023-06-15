@@ -1,21 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Title from "../Title/Title";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { ThemeContext } from '../../ContextTheme';
-import { FiExternalLink } from 'react-icons/fi';
+import { ThemeContext } from "../../ContextTheme";
+import { FiExternalLink } from "react-icons/fi";
 
 const StyledProjects = styled.section`
-  height: 100vh;
-  padding: var(--padding);
+  padding: 3rem 5%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
+  background-color: ${(props) =>
+    props.darkmode ? "var(--secondary-bgcolor)" : "var(--primary-bgcolor)"};
   @media (max-width: 768px) {
     height: auto;
     padding: var(--padding-tablet);
@@ -25,9 +25,7 @@ const StyledProjects = styled.section`
   }
 `;
 
-const StyledCarousel = styled(Slider)`
-  margin: 20px 0;
-`
+const StyledCarousel = styled(Slider)``;
 
 const StyledCard = styled.div`
   width: 100%;
@@ -63,7 +61,8 @@ const StyledDataContainer = styled.div`
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
+  color: ${(props) =>
+    props.darkmode ? "var(--primary-fontcolor)" : "var(--secondary-fontcolor)"};
   @media (max-width: 425px) {
     width: 100%;
   }
@@ -84,14 +83,12 @@ const StyledDescriptionCard = styled.p`
   }
 `;
 
-const StyledButtonsCard = styled.div`
-
-`;
+const StyledButtonsCard = styled.div``;
 
 const StyledButtonCard = styled.a`
   cursor: pointer;
   padding: 10px 20px;
-  background-color: #2490CE;
+  background-color: #2490ce;
   border: none;
   color: #fff;
   border-radius: 0.5rem;
@@ -105,7 +102,6 @@ const StyledButtonCard = styled.a`
 `;
 
 const Projects = () => {
-
   const { darkMode } = useContext(ThemeContext);
 
   const settings = {
@@ -124,8 +120,8 @@ const Projects = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 425,
@@ -134,30 +130,36 @@ const Projects = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          arrows: false
-        }
-      }
-    ]
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
-    <StyledProjects darkmode={darkMode} id='portafolio'>
-      <Title title={"Proyectos"} darkmode={darkMode}/>
+    <StyledProjects darkmode={darkMode} id="portafolio">
+      <Title title={"Proyectos"} darkmode={darkMode} />
       <StyledCarousel {...settings}>
         <div>
           <StyledCard>
             <StyledImageContainer>
-              <StyledImageCard src='https://i.ibb.co/3BfQBcc/encriptador.jpg' alt='Mockups Encriptador de Texto'/>
+              <StyledImageCard
+                src="https://i.ibb.co/3BfQBcc/encriptador.jpg"
+                alt="Mockups Encriptador de Texto"
+              />
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
-              <StyledTitleCard>
-                Encriptador de Texto
-              </StyledTitleCard>
+              <StyledTitleCard>Encriptador de Texto</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de un encriptador de texto como desafío de la ruta "Lógica de Programación" de la formación Oracle Next Education.
+                Desarrollo de un encriptador de texto como desafío de la ruta
+                "Lógica de Programación" de la formación Oracle Next Education.
               </StyledDescriptionCard>
               <StyledButtonsCard>
-                <StyledButtonCard href="https://carlosedm97.github.io/encriptador_de_texto_ONE/" target="_blank" rel="noopener noreferrer">
+                <StyledButtonCard
+                  href="https://carlosedm97.github.io/encriptador_de_texto_ONE/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>
@@ -167,17 +169,23 @@ const Projects = () => {
         <div>
           <StyledCard>
             <StyledImageContainer>
-              <StyledImageCard src="https://i.ibb.co/jR7QqcK/alurageek.jpg" alt='Mockups AluraGeek'/>
+              <StyledImageCard
+                src="https://i.ibb.co/jR7QqcK/alurageek.jpg"
+                alt="Mockups AluraGeek"
+              />
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
-              <StyledTitleCard>
-                AluraGeek
-              </StyledTitleCard>
+              <StyledTitleCard>AluraGeek</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de un Ecommerce como desafío de la ruta 'Front End' de la formación Oracle Next Education.
+                Desarrollo de un Ecommerce como desafío de la ruta 'Front End'
+                de la formación Oracle Next Education.
               </StyledDescriptionCard>
               <StyledButtonsCard>
-                <StyledButtonCard href="https://alurageek-one-carlosedm97.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <StyledButtonCard
+                  href="https://alurageek-one-carlosedm97.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>
@@ -187,17 +195,23 @@ const Projects = () => {
         <div>
           <StyledCard>
             <StyledImageContainer>
-              <StyledImageCard src="https://i.ibb.co/fH6Dd2w/image1.jpg" alt='Mockups AluraFlix'/>
+              <StyledImageCard
+                src="https://i.ibb.co/fH6Dd2w/image1.jpg"
+                alt="Mockups AluraFlix"
+              />
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
-              <StyledTitleCard>
-                AluraFlix
-              </StyledTitleCard>
+              <StyledTitleCard>AluraFlix</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de una página web de videos como desafío de la ruta "React JS" de la formación Oracle Next Education.
+                Desarrollo de una página web de videos como desafío de la ruta
+                "React JS" de la formación Oracle Next Education.
               </StyledDescriptionCard>
               <StyledButtonsCard>
-                <StyledButtonCard href="https://aluraflix-one-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <StyledButtonCard
+                  href="https://aluraflix-one-alpha.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ver más <FiExternalLink />
                 </StyledButtonCard>
               </StyledButtonsCard>

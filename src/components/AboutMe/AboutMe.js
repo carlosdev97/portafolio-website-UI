@@ -4,8 +4,7 @@ import Title from '../Title/Title';
 import { ThemeContext } from '../../ContextTheme';
 
 const StyledAboutMe = styled.section`
-  height: 100vh;
-  padding: var(--padding);
+  padding: 3rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;

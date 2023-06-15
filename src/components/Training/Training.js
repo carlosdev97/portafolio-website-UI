@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
+import React, { useContext } from "react";
+import styled from "styled-components";
 import Title from "../Title/Title";
-import { ThemeContext } from '../../ContextTheme';
-import { AiOutlineCalendar } from "react-icons/ai"
+import { ThemeContext } from "../../ContextTheme";
+import { AiOutlineCalendar } from "react-icons/ai";
 
 const StyledTraining = styled.section`
-  height: 100vh;
-  padding: var(--padding);
-  background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
+  padding: 3rem 5%;
+  background-color: ${(props) =>
+    props.darkmode ? "var(--secondary-bgcolor)" : "var(--primary-bgcolor)"};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ const StyledTraining = styled.section`
   @media (max-width: 425px) {
     padding: var(--padding-mobile);
   }
-`
+`;
 
 const StyledTrainingContainer = styled.div`
   padding: 0 30%;
@@ -29,8 +29,7 @@ const StyledTrainingContainer = styled.div`
   @media (max-width: 425px) {
     padding: 0;
   }
-`
-// ! Inicio tarjeta
+`;
 
 const StyledTrainingCard = styled.div`
   display: grid;
@@ -39,33 +38,24 @@ const StyledTrainingCard = styled.div`
   @media (max-width: 425px) {
     column-gap: 1rem;
   }
-`
-// ! Seccion 1 Tarjeta -----------
+`;
 
 const StyledCardData = styled.div`
-  color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
-`
-// ! Seccion Data -------------
+  color: ${(props) =>
+    props.darkmode ? "var(--primary-fontcolor)" : "var(--secondary-fontcolor)"};
+`;
 
-const StyledDataTitle = styled.h3`
-
-`
+const StyledDataTitle = styled.h3``;
 
 const StyledDataSubtitle = styled.span`
   margin-bottom: 10px;
-`
+`;
 
 const StyleDataDate = styled.div`
   margin-top: 10px;
-`
+`;
 
-// ! Seccion 2 Tarjeta ------------
-
-const StyledCardDesing = styled.div`
-
-`
-
-// ! Seccion Desing ------------
+const StyledCardDesing = styled.div``;
 
 const StyledCardRounder = styled.span`
   display: inline-block;
@@ -73,8 +63,7 @@ const StyledCardRounder = styled.span`
   height: 13px;
   background-color: var(--primary-color);
   border-radius: 50%;
-
-`
+`;
 
 const StyledCardLine = styled.div`
   display: block;
@@ -82,65 +71,70 @@ const StyledCardLine = styled.div`
   height: 100%;
   background-color: var(--primary-color);
   transform: translate(6px, -7px);
-`
+`;
 
-// ! Sección 3 Tarjeta -----------
-
-const StyldCardSpace = styled.div`
-
-`
+const StyldCardSpace = styled.div``;
 
 const Training = () => {
-
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <StyledTraining darkmode={darkMode} id='formacion'>
-      <Title title={"Formación"} darkmode={darkMode}/>
+    <StyledTraining darkmode={darkMode} id="formacion">
+      <Title title={"Formación"} darkmode={darkMode} />
       <StyledTrainingContainer>
         <StyledTrainingCard>
           <StyledCardData darkmode={darkMode}>
             <StyledDataTitle> Desarrollo Web </StyledDataTitle>
             <StyledDataSubtitle> Oracle Next Education </StyledDataSubtitle>
-            <StyleDataDate> <AiOutlineCalendar /> Nov. 2022 - Jun. 2023</StyleDataDate>
+            <StyleDataDate>
+              {" "}
+              <AiOutlineCalendar /> Nov. 2022 - Jun. 2023
+            </StyleDataDate>
           </StyledCardData>
           <StyledCardDesing>
-            <StyledCardRounder>
-            </StyledCardRounder>
-            <StyledCardLine>
-            </StyledCardLine>
+            <StyledCardRounder></StyledCardRounder>
+            <StyledCardLine></StyledCardLine>
             <StyldCardSpace></StyldCardSpace>
           </StyledCardDesing>
         </StyledTrainingCard>
         <StyledTrainingCard>
           <StyldCardSpace></StyldCardSpace>
           <StyledCardDesing>
-            <StyledCardRounder>
-            </StyledCardRounder>
-            <StyledCardLine>
-            </StyledCardLine>
+            <StyledCardRounder></StyledCardRounder>
+            <StyledCardLine></StyledCardLine>
           </StyledCardDesing>
           <StyledCardData darkmode={darkMode}>
-            <StyledDataTitle> Diplomado en Hábilidades de programación </StyledDataTitle>
+            <StyledDataTitle>
+              {" "}
+              Diplomado en Hábilidades de programación{" "}
+            </StyledDataTitle>
             <StyledDataSubtitle> Misión TIC 2022 </StyledDataSubtitle>
-            <StyleDataDate> <AiOutlineCalendar /> Abr. 2022 - Dic. 2023</StyleDataDate>
+            <StyleDataDate>
+              {" "}
+              <AiOutlineCalendar /> Abr. 2022 - Dic. 2023
+            </StyleDataDate>
           </StyledCardData>
         </StyledTrainingCard>
         <StyledTrainingCard>
           <StyledCardData darkmode={darkMode}>
-            <StyledDataTitle> Universidad HTML 2021 - Aprende HTML desde Cero hasta Experto </StyledDataTitle>
+            <StyledDataTitle>
+              {" "}
+              Universidad HTML 2021 - Aprende HTML desde Cero hasta Experto{" "}
+            </StyledDataTitle>
             <StyledDataSubtitle> Udemy </StyledDataSubtitle>
-            <StyleDataDate> <AiOutlineCalendar /> Nov. 2021 - Nov. 2021</StyleDataDate>
+            <StyleDataDate>
+              {" "}
+              <AiOutlineCalendar /> Nov. 2021 - Nov. 2021
+            </StyleDataDate>
           </StyledCardData>
           <StyledCardDesing>
-            <StyledCardRounder>
-            </StyledCardRounder>
+            <StyledCardRounder></StyledCardRounder>
             <StyldCardSpace></StyldCardSpace>
           </StyledCardDesing>
         </StyledTrainingCard>
       </StyledTrainingContainer>
     </StyledTraining>
-  )
-}
+  );
+};
 
 export default Training;

@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { AiFillGithub, AiFillLinkedin, AiFillFilePdf } from 'react-icons/ai';
-import { ThemeContext } from '../../ContextTheme';
+import { AiFillGithub, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
+import { ThemeContext } from "../../ContextTheme";
 
 const StyledHero = styled.section`
-  height: calc(100vh - 114px);
-  padding: var(--padding);
+  padding: 10rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${props => (props.darkmode ? 'var(--secondary-bgcolor)' : 'var(--primary-bgcolor)')};
+  background-color: ${(props) =>
+    props.darkmode ? "var(--secondary-bgcolor)" : "var(--primary-bgcolor)"};
   @media (max-width: 768px) {
     height: auto;
     padding: var(--padding-tablet);
@@ -21,18 +21,19 @@ const StyledHero = styled.section`
   @media (max-width: 425px) {
     padding: var(--padding-mobile);
   }
-`
+`;
 
 const StyledHeroInfo = styled.div`
   width: 80%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
+  color: ${(props) =>
+    props.darkmode ? "var(--primary-fontcolor)" : "var(--secondary-fontcolor)"};
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 const StyledHeroTexts = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ const StyledHeroTexts = styled.div`
     width: 100%;
     text-align: center;
   }
-`
+`;
 
 const StyledHeroParagraph = styled.p`
   margin: 0;
@@ -54,7 +55,7 @@ const StyledHeroParagraph = styled.p`
   @media (max-width: 425px) {
     font-size: 1.4rem;
   }
-`
+`;
 
 const StyledHeroTitle = styled.h2`
   font-size: 3rem;
@@ -64,12 +65,12 @@ const StyledHeroTitle = styled.h2`
   @media (max-width: 425px) {
     font-size: 1.4rem;
   }
-`
+`;
 
 const StyledHeroUnderscore = styled.span`
   display: inline-block;
-  color: #2490CE;
-`
+  color: #2490ce;
+`;
 
 const StyledHeroButtons = styled.div`
   width: 50%;
@@ -79,7 +80,7 @@ const StyledHeroButtons = styled.div`
     width: 100%;
     justify-content: space-evenly;
   }
-`
+`;
 
 const StyledHeroLink = styled.a`
   text-decoration: none;
@@ -87,26 +88,27 @@ const StyledHeroLink = styled.a`
   gap: 10px;
   align-items: center;
   font-size: 1.2rem;
-  color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
+  color: ${(props) =>
+    props.darkmode ? "var(--primary-fontcolor)" : "var(--secondary-fontcolor)"};
   &:hover {
     text-decoration: underline;
   }
   @media (max-width: 425px) {
     font-size: 1rem;
   }
-`
+`;
 
 const StyledAiFillGithub = styled(AiFillGithub)`
   color: var(--primary-color);
-`
+`;
 
 const StyledAiFillLinkedin = styled(AiFillLinkedin)`
   color: var(--primary-color);
-`
+`;
 
 const StyledAiFillFilePdf = styled(AiFillFilePdf)`
   color: var(--primary-color);
-`
+`;
 
 const StyledHeroImage = styled.img`
   width: 350px;
@@ -120,51 +122,55 @@ const StyledHeroImage = styled.img`
     width: 200px;
     height: 200px;
   }
-`
+`;
 
 const Hero = () => {
-
   const { darkMode } = useContext(ThemeContext);
 
   return (
     <StyledHero darkmode={darkMode}>
       <StyledHeroInfo darkmode={darkMode}>
         <StyledHeroTexts>
-          <StyledHeroParagraph>
-            Hola, me llamo Carlos, soy
-          </StyledHeroParagraph>
+          <StyledHeroParagraph>Hola, me llamo Carlos, soy</StyledHeroParagraph>
           <StyledHeroTitle>
-            Desarrollador Front End<StyledHeroUnderscore>.</StyledHeroUnderscore>
+            Desarrollador Front End
+            <StyledHeroUnderscore>.</StyledHeroUnderscore>
           </StyledHeroTitle>
         </StyledHeroTexts>
         <StyledHeroButtons>
-          <StyledHeroLink 
-            href='https://github.com/Carlosedm97' 
-            target='_blank' 
-            rel='noopener noreferrer'
-            darkmode={darkMode}>
-              GitHub
-              <StyledAiFillGithub />
+          <StyledHeroLink
+            href="https://github.com/Carlosedm97"
+            target="_blank"
+            rel="noopener noreferrer"
+            darkmode={darkMode}
+          >
+            GitHub
+            <StyledAiFillGithub />
           </StyledHeroLink>
-          <StyledHeroLink 
-            href='https://www.linkedin.com/in/carlos-antonio-meza-lopez/' 
-            target='_blank' 
-            rel='noopener noreferrer'
-            darkmode={darkMode}>
-              LinkedIn
-              <StyledAiFillLinkedin />
+          <StyledHeroLink
+            href="https://www.linkedin.com/in/carlos-antonio-meza-lopez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            darkmode={darkMode}
+          >
+            LinkedIn
+            <StyledAiFillLinkedin />
           </StyledHeroLink>
-          <StyledHeroLink 
-            href='#' 
-            target='_blank' 
-            rel='noopener noreferrer'
-            darkmode={darkMode}>
-              Curriculum
-              <StyledAiFillFilePdf />
+          <StyledHeroLink
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            darkmode={darkMode}
+          >
+            Curriculum
+            <StyledAiFillFilePdf />
           </StyledHeroLink>
         </StyledHeroButtons>
       </StyledHeroInfo>
-      <StyledHeroImage src="https://github.com/Carlosedm97.png" alt="Foto de Carlos" />
+      <StyledHeroImage
+        src="https://github.com/Carlosedm97.png"
+        alt="Foto de Carlos"
+      />
     </StyledHero>
   );
 };
