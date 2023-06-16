@@ -15,6 +15,7 @@ const StyledCard = styled.div`
   padding-bottom: 16px;
   padding-left: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: .3s;
   @media (max-width: 425px) {
     width: 120px;
     height: 120px;
