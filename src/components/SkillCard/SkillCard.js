@@ -16,9 +16,8 @@ const StyledCard = styled.div`
   padding-left: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   @media (max-width: 425px) {
-    width: 100px;
-    height: 100px;
-    font-size: 1rem;
+    width: 120px;
+    height: 120px;
   }
 `;
 
@@ -27,7 +26,7 @@ const StyledCardInfo = styled.div``;
 const StyledCardTitle = styled.h3`
   font-weight: 400;
   @media (max-width: 425px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `;
 
