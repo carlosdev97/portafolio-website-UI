@@ -19,11 +19,14 @@ const StyledContact = styled.section`
 
 const StyledForm = styled.form`
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
   border: 1px solid #e8e8e8;
   padding: 2.5em 1.5em;
   border-radius: 1em;
   background-color: #fff;
+  @media (max-width: 425px) {
+    max-width: 300px;
+  }
 `;
 
 const Contact = () => {
