@@ -19,7 +19,7 @@ const StyledContact = styled.section`
 
 const StyledForm = styled.form`
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   border: 1px solid #e8e8e8;
   padding: 2.5em 1.5em;
   border-radius: 1em;
