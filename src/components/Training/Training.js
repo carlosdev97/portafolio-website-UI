@@ -5,7 +5,7 @@ import { ThemeContext } from "../../ContextTheme";
 import { AiOutlineCalendar } from "react-icons/ai";
 
 const StyledTraining = styled.section`
-  padding: 3rem 5%;
+  padding: 5rem 5%;
   background-color: ${(props) =>
     props.darkmode ? "var(--secondary-bgcolor)" : "var(--primary-bgcolor)"};
   display: flex;

@@ -6,7 +6,7 @@ import { SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiStyledcomponents } fro
 import { ThemeContext } from "../../ContextTheme";
 
 const StyledSkills = styled.section`
-  padding: 3rem 5%;
+  padding: 10rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;

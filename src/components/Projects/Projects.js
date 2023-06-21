@@ -40,7 +40,7 @@ const StyledCard = styled.div`
 `;
 
 const StyledImageContainer = styled.div`
-  width: 40%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -151,8 +151,7 @@ const Projects = () => {
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>Encriptador de Texto</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de un encriptador de texto como desafío de la ruta
-                "Lógica de Programación" de la formación Oracle Next Education.
+                El proyecto consiste en la creación de una página web en la cual se proporciona cualquier texto para que sea encriptado o desencriptado. Además de estas dos funcionalidades, la página también cuenta con un botón para copiar el texto ya procesado.
               </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard
@@ -177,9 +176,7 @@ const Projects = () => {
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>AluraGeek</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de un Ecommerce como desafío de la ruta 'Front End'
-                de la formación Oracle Next Education.
-              </StyledDescriptionCard>
+                E-commerce para una tienda ficticia de accesorios para geeks y gamers. La página posee un formulario de inicio de sesión de administrador para la gestión del inventario, donde se podrán visualizar todos los productos, crear nuevos productos, editar productos existentes y eliminar productos. También cuenta con una barra de búsqueda, validación de formularios para el registro de nuevos productos y un formulario de contacto.              </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard
                   href="https://alurageek-one-carlosedm97.vercel.app/"
@@ -203,8 +200,7 @@ const Projects = () => {
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>AluraFlix</StyledTitleCard>
               <StyledDescriptionCard>
-                Desarrollo de una página web de videos como desafío de la ruta
-                "React JS" de la formación Oracle Next Education.
+              Desarrollo de una plataforma de videos educativos en la cual se pueden clasificar por categorías y asignarles un color. La plataforma incluye un formulario para agregar nuevos videos, así como para agregar nuevas categorías, cada una con su respectiva validación.
               </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard
