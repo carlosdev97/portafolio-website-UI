@@ -78,6 +78,7 @@ const StyledTitleCard = styled.h3`
 
 const StyledDescriptionCard = styled.p`
   margin: 15px 0 30px 0;
+  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
   @media (max-width: 425px) {
     margin: 0 0 30px 0;
   }
@@ -150,7 +151,7 @@ const Projects = () => {
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>Encriptador de Texto</StyledTitleCard>
-              <StyledDescriptionCard>
+              <StyledDescriptionCard darkmode={darkMode}>
                 El proyecto consiste en la creación de una página web en la cual se proporciona cualquier texto para que sea encriptado o desencriptado. Además de estas dos funcionalidades, la página también cuenta con un botón para copiar el texto ya procesado.
               </StyledDescriptionCard>
               <StyledButtonsCard>
@@ -175,7 +176,7 @@ const Projects = () => {
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>AluraGeek</StyledTitleCard>
-              <StyledDescriptionCard>
+              <StyledDescriptionCard darkmode={darkMode}>
                 E-commerce para una tienda ficticia de accesorios para geeks y gamers. La página posee un formulario de inicio de sesión de administrador para la gestión del inventario, donde se podrán visualizar todos los productos, crear nuevos productos, editar productos existentes y eliminar productos. También cuenta con una barra de búsqueda, validación de formularios para el registro de nuevos productos y un formulario de contacto.              </StyledDescriptionCard>
               <StyledButtonsCard>
                 <StyledButtonCard
@@ -199,7 +200,7 @@ const Projects = () => {
             </StyledImageContainer>
             <StyledDataContainer darkmode={darkMode}>
               <StyledTitleCard>AluraFlix</StyledTitleCard>
-              <StyledDescriptionCard>
+              <StyledDescriptionCard darkmode={darkMode}>
               Desarrollo de una plataforma de videos educativos en la cual se pueden clasificar por categorías y asignarles un color. La plataforma incluye un formulario para agregar nuevos videos, así como para agregar nuevas categorías, cada una con su respectiva validación.
               </StyledDescriptionCard>
               <StyledButtonsCard>

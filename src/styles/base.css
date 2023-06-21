@@ -2,6 +2,8 @@
     --primary-color: #2490ce;
     --primary-fontcolor: #1a2233;
     --secondary-fontcolor: #ffffff;
+    --tertiary-fontcolor-ligth: hsl(219, 8%, 45%);
+    --cuaternary-fontcolor-dark: hsl(219, 8%, 75%);
 
     --primary-bgcolor: #1a2233;
     --secondary-bgcolor: #ffffff;

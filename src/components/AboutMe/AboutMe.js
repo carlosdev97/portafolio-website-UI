@@ -19,7 +19,7 @@ const StyledAboutMe = styled.section`
   }
 `
 const StyledParagraph = styled.p`
-  color: ${props => (props.darkmode ? 'var(--primary-fontcolor)' : 'var(--secondary-fontcolor)')};
+  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
 `
 
 const AboutMe = () => {

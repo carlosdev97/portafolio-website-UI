@@ -45,14 +45,18 @@ const StyledCardData = styled.div`
     props.darkmode ? "var(--primary-fontcolor)" : "var(--secondary-fontcolor)"};
 `;
 
-const StyledDataTitle = styled.h3``;
+const StyledDataTitle = styled.h3`
+  margin-bottom: 10px;
+`;
 
 const StyledDataSubtitle = styled.span`
   margin-bottom: 10px;
+  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
 `;
 
 const StyleDataDate = styled.div`
   margin-top: 10px;
+  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
 `;
 
 const StyledCardDesing = styled.div``;
@@ -85,8 +89,8 @@ const Training = () => {
         <StyledTrainingCard>
           <StyledCardData darkmode={darkMode}>
             <StyledDataTitle> Desarrollo Web </StyledDataTitle>
-            <StyledDataSubtitle> Oracle Next Education </StyledDataSubtitle>
-            <StyleDataDate>
+            <StyledDataSubtitle darkmode={darkMode} > Oracle Next Education </StyledDataSubtitle>
+            <StyleDataDate darkmode={darkMode} >
               {" "}
               <AiOutlineCalendar /> Nov. 2022 - Jun. 2023
             </StyleDataDate>
@@ -108,8 +112,8 @@ const Training = () => {
               {" "}
               Diplomado en Hábilidades de programación{" "}
             </StyledDataTitle>
-            <StyledDataSubtitle> Misión TIC 2022 </StyledDataSubtitle>
-            <StyleDataDate>
+            <StyledDataSubtitle darkmode={darkMode} > Misión TIC 2022 </StyledDataSubtitle>
+            <StyleDataDate darkmode={darkMode}>
               {" "}
               <AiOutlineCalendar /> Abr. 2022 - Dic. 2023
             </StyleDataDate>
@@ -121,8 +125,8 @@ const Training = () => {
               {" "}
               Universidad HTML 2021 - Aprende HTML desde Cero hasta Experto{" "}
             </StyledDataTitle>
-            <StyledDataSubtitle> Udemy </StyledDataSubtitle>
-            <StyleDataDate>
+            <StyledDataSubtitle darkmode={darkMode}> Udemy </StyledDataSubtitle>
+            <StyleDataDate darkmode={darkMode}>
               {" "}
               <AiOutlineCalendar /> Nov. 2021 - Nov. 2021
             </StyleDataDate>
