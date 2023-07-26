@@ -19,7 +19,12 @@ const StyledAboutMe = styled.section`
   }
 `
 const StyledParagraph = styled.p`
+  font-size: 1.2rem;
+  text-align: justify;
   color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
+  @media (max-width: 425px){
+    text-align: center;
+  }
 `
 
 const AboutMe = () => {

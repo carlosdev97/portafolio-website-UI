@@ -8,7 +8,7 @@ import SendIcon from "@mui/icons-material/Send";
 import queryString from "query-string";
 
 const StyledContact = styled.section`
-  padding: 10rem 5%;
+  padding: 5rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@ const StyledForm = styled.form`
   border-radius: 1em;
   background-color: #fff;
   @media (max-width: 425px) {
-    max-width: 300px;
+    max-width: 325px;
   }
 `;
 
@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <StyledContact darkmode={darkMode}>
+    <StyledContact darkmode={darkMode} id="contacto" >
       <Title title="Contacto" darkmode={darkMode} />
       <StyledForm onSubmit={handleSubmit}>
         <TextField
