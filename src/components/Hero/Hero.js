@@ -140,7 +140,7 @@ const Hero = () => {
         </StyledHeroTexts>
         <StyledHeroButtons>
           <StyledHeroLink
-            href="https://github.com/Carlosedm97"
+            href="https://github.com/carlosdev97"
             target="_blank"
             rel="noopener noreferrer"
             darkmode={darkMode}
@@ -169,7 +169,7 @@ const Hero = () => {
         </StyledHeroButtons>
       </StyledHeroInfo>
       <StyledHeroImage
-        src="https://github.com/Carlosedm97.png"
+        src="https://github.com/carlosdev97.png"
         alt="Foto de Carlos"
       />
     </StyledHero>
