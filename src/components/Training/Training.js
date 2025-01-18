@@ -51,12 +51,18 @@ const StyledDataTitle = styled.h3`
 
 const StyledDataSubtitle = styled.span`
   margin-bottom: 10px;
-  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
+  color: ${(props) =>
+    props.darkmode
+      ? "var(--tertiary-fontcolor-ligth)"
+      : "var(--cuaternary-fontcolor-dark)"};
 `;
 
 const StyleDataDate = styled.div`
   margin-top: 10px;
-  color: ${props => (props.darkmode ? 'var(--tertiary-fontcolor-ligth)' : 'var(--cuaternary-fontcolor-dark)')};
+  color: ${(props) =>
+    props.darkmode
+      ? "var(--tertiary-fontcolor-ligth)"
+      : "var(--cuaternary-fontcolor-dark)"};
 `;
 
 const StyledCardDesing = styled.div``;
@@ -67,6 +73,23 @@ const StyledCardRounder = styled.span`
   height: 13px;
   background-color: var(--primary-color);
   border-radius: 50%;
+
+  &.last-point {
+    position: relative;
+    animation: pulse 2s infinite;
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(0, 123, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+      }
+    }
+  }
 `;
 
 const StyledCardLine = styled.div`
@@ -87,10 +110,34 @@ const Training = () => {
       <Title title={"Formación"} darkmode={darkMode} />
       <StyledTrainingContainer>
         <StyledTrainingCard>
+          <StyldCardSpace></StyldCardSpace>
+          <StyledCardDesing>
+            <StyledCardRounder className="last-point"></StyledCardRounder>
+            <StyledCardLine></StyledCardLine>
+          </StyledCardDesing>
+          <StyledCardData darkmode={darkMode}>
+            <StyledDataTitle>
+              {" "}
+              Técnico Laboral en Asistente de Desarrollo de Software{" "}
+            </StyledDataTitle>
+            <StyledDataSubtitle darkmode={darkMode}>
+              {" "}
+              1000 Programadores para el Valle del Cauca{" "}
+            </StyledDataSubtitle>
+            <StyleDataDate darkmode={darkMode}>
+              {" "}
+              <AiOutlineCalendar /> Ago. 2024 - Actualidad
+            </StyleDataDate>
+          </StyledCardData>
+        </StyledTrainingCard>
+        <StyledTrainingCard>
           <StyledCardData darkmode={darkMode}>
             <StyledDataTitle> Desarrollo Web </StyledDataTitle>
-            <StyledDataSubtitle darkmode={darkMode} > Oracle Next Education </StyledDataSubtitle>
-            <StyleDataDate darkmode={darkMode} >
+            <StyledDataSubtitle darkmode={darkMode}>
+              {" "}
+              Oracle Next Education{" "}
+            </StyledDataSubtitle>
+            <StyleDataDate darkmode={darkMode}>
               {" "}
               <AiOutlineCalendar /> Nov. 2022 - Jun. 2023
             </StyleDataDate>
@@ -112,7 +159,10 @@ const Training = () => {
               {" "}
               Diplomado en Hábilidades de programación{" "}
             </StyledDataTitle>
-            <StyledDataSubtitle darkmode={darkMode} > Misión TIC 2022 </StyledDataSubtitle>
+            <StyledDataSubtitle darkmode={darkMode}>
+              {" "}
+              Misión TIC 2022{" "}
+            </StyledDataSubtitle>
             <StyleDataDate darkmode={darkMode}>
               {" "}
               <AiOutlineCalendar /> Abr. 2022 - Dic. 2023

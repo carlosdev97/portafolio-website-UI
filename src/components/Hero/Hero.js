@@ -149,7 +149,7 @@ const Hero = () => {
             <StyledAiFillGithub />
           </StyledHeroLink>
           <StyledHeroLink
-            href="https://www.linkedin.com/in/carlos-antonio-meza-lopez/"
+            href="https://www.linkedin.com/in/carlosedm97/"
             target="_blank"
             rel="noopener noreferrer"
             darkmode={darkMode}
